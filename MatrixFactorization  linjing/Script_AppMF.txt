@@ -1,0 +1,15 @@
+// javac AppMF.java
+
+// 1. Probabilistic Matrix Factorization (PMF)
+// java -Xmx2048m AppMF -method PMF -d 20 -T 100 -gamma 0.01 -alphaU 0.01 -alphaV 0.01 -fnTrainData u1.base -fnTestData u1.test -n 943 -m 1682
+
+java -Xmx2048m AppMF -method PMF -d 20 -T 100 -gamma 0.01 -alphaU 0.01 -alphaV 0.01 -fnTrainData u1.base -fnTestData u1.test -n 943 -m 1682
+	MAE: 0.8919922265130239
+	RMSE: 1.1626891864532052
+
+// 2. Regularized Singular Value Decomposition (RSVD)
+// java -Xmx2048m AppMF -method RSVD -d 20 -T 100 -gamma 0.01 -alphaU 0.01 -alphaV 0.01 -betaU 0.01 -bataV 0.01 -fnTrainData u1.base -fnTestData u1.test -n 943 -m 1682
+
+java -Xmx2048m AppMF -method RSVD -d 20 -T 100 -gamma 0.01 -alphaU 0.01 -alphaV 0.01 -betaU 0.01 -bataV 0.01 -fnTrainData u1.base -fnTestData u1.test -n 943 -m 1682
+	MAE: 0.8908349955066835
+	RMSE: 1.1619840036641702
